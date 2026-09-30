@@ -25,8 +25,7 @@ namespace PresseMots.Models
         [DataType(DataType.MultilineText)]
         public string Content { get; set; }
 
-        [NotMapped]
-        public IList<string> Tags { get; set; } = new List<string>();
+        public virtual IList<StoryTag> StoryTag { get; set; } = new List<StoryTag>();
         public DateTime CreationTime { get; set; }
         public DateTime? LastEditTime { get; set; }
         public DateTime? PublishTime { get; set; }
